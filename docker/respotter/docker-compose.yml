@@ -1,0 +1,22 @@
+networks:
+  respotter_local:
+
+services:
+
+# respotter service
+  respotter:
+    build: .
+    container_name: respotter
+    restart: always
+    networks:
+     - respotter_local
+    ports:
+     - "137:137" # NBS
+     - "5353:5353" # MDNS
+     - "5355:5355" # LLMNR
+    image: ghcr.io/lawndoc/respotter:latest
+    read_only: true
+    volumes:
+     - $HOME/tpotce/data/respotter/state:/state
+     - $HOME/tpotce/data/respotter/:/config
+     - $HOME/tpotce/data/respotter/log:/var/log/respotter

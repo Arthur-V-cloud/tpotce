@@ -18,6 +18,7 @@ networks:
   medpot_local:
   miniprint_local:
   redishoneypot_local:
+  respotter_local:
   sentrypeer_local:
   tanner_local:
   wordpot_local:
@@ -478,6 +479,27 @@ services:
     read_only: true
     volumes:
      - ${TPOT_DATA_PATH}/redishoneypot/log:/var/log/redishoneypot
+
+# Respotter service
+  respotter:
+    container_name: respotter
+    restart: always
+    depends_on:
+      tpotinit:
+        condition: service_healthy
+    networks:
+     - respotter_local
+    ports:
+     - "137:137" # NBS
+     - "5353:5353" # MDNS
+     - "5355:5355" # LLMNR
+    image: ${TPOT_REPO}/respotter:${TPOT_VERSION}
+    pull_policy: ${TPOT_PULL_POLICY}
+    read_only: true
+    volumes:
+     - ${TPOT_DATA_PATH}/respotter/:/config
+     - ${TPOT_DATA_PATH}/respotter/state:/state
+     - ${TPOT_DATA_PATH}/respotter/log:/var/log/respotter
 
 # SentryPeer service
   sentrypeer:

@@ -137,6 +137,7 @@ T-Pot's main components have been moved into the `tpotinit` Docker image allowin
 [medpot](https://github.com/schmalle/medpot),
 [miniprint](https://github.com/sa7mon/miniprint),
 [redishoneypot](https://github.com/cypwnpwnsocute/RedisHoneyPot),
+[respotter](https://github.com/lawndoc/Respotter),
 [sentrypeer](https://github.com/SentryPeer/SentryPeer),
 [snare](http://mushmush.org/),
 [tanner](http://mushmush.org/),
@@ -284,6 +285,7 @@ Besides the ports generally needed by the OS, i.e. obtaining a DHCP lease, DNS, 
 | 2575                                                                                                                                  | tcp      | incoming  | Honeypot: Medpot                                                                                    |
 | 9100                                                                                                                                  | tcp      | incoming  | Honeypot: Miniprint                                                                                 |
 | 6379                                                                                                                                  | tcp      | incoming  | Honeypot: Redishoneypot                                                                             |
+| 137, 5353, 5355                                                                                                                       | tcp      | incoming  | Honeypot: Respotter                                                                                 |
 | 5060                                                                                                                                  | tcp/udp  | incoming  | Honeypot: SentryPeer                                                                                |
 | 80                                                                                                                                    | tcp      | incoming  | Honeypot: Snare (Tanner)                                                                            |
 | 8090                                                                                                                                  | tcp      | incoming  | Honeypot: Wordpot                                                                                   |
@@ -836,6 +838,7 @@ The software that T-Pot is built on uses the following licenses.
 [hellpot](https://github.com/yunginnanet/HellPot/blob/master/LICENSE),
 [honeyaml](https://github.com/mmta/honeyaml?tab=MIT-1-ov-file#readme),
 [maltrail](https://github.com/stamparm/maltrail/blob/master/LICENSE)
+[respotter](https://github.com/lawndoc/Respotter/blob/main/LICENSE)
 <br>Unlicense:
 [endlessh](https://github.com/skeeto/endlessh/blob/master/UNLICENSE)
 <br>Other:
@@ -891,6 +894,7 @@ Without open source and the development community we are proud to be a part of, 
 [miniprint](https://github.com/sa7mon/miniprint/graphs/contributors),
 [p0f](http://lcamtuf.coredump.cx/p0f3/),
 [redishoneypot](https://github.com/cypwnpwnsocute/RedisHoneyPot/graphs/contributors),
+[respotter](https://github.com/lawndoc/Respotter/graphs/contributors)
 [sentrypeer](https://github.com/SentryPeer/SentryPeer/graphs/contributors),
 [spiderfoot](https://github.com/smicallef/spiderfoot),
 [snare](https://github.com/mushorg/snare/graphs/contributors),
